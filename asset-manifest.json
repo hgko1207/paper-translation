@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/paper-translation/static/css/main.f5b39208.chunk.css",
+    "main.js": "/paper-translation/static/js/main.44774ffb.chunk.js",
+    "main.js.map": "/paper-translation/static/js/main.44774ffb.chunk.js.map",
+    "runtime-main.js": "/paper-translation/static/js/runtime-main.7372e008.js",
+    "runtime-main.js.map": "/paper-translation/static/js/runtime-main.7372e008.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/paper-translation/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.398a2e5d.chunk.js": "/paper-translation/static/js/2.398a2e5d.chunk.js",
+    "static/js/2.398a2e5d.chunk.js.map": "/paper-translation/static/js/2.398a2e5d.chunk.js.map",
+    "index.html": "/paper-translation/index.html",
+    "precache-manifest.7d2ccf0eff4bc4f6243d59f00092d73b.js": "/paper-translation/precache-manifest.7d2ccf0eff4bc4f6243d59f00092d73b.js",
+    "service-worker.js": "/paper-translation/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/paper-translation/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.f5b39208.chunk.css.map": "/paper-translation/static/css/main.f5b39208.chunk.css.map",
+    "static/js/2.398a2e5d.chunk.js.LICENSE.txt": "/paper-translation/static/js/2.398a2e5d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7372e008.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.398a2e5d.chunk.js",
+    "static/css/main.f5b39208.chunk.css",
+    "static/js/main.44774ffb.chunk.js"
+  ]
+}
