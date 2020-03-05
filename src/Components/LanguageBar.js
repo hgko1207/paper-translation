@@ -15,6 +15,7 @@ const Content = styled.div`
   height: 48px;
   margin: 0;
   width: 50%;
+  vertical-align: top;
 `;
 
 const Text = styled.div`
@@ -22,17 +23,27 @@ const Text = styled.div`
   font-size: 16px;
   font-weight: 600;
   line-height: 48px;
-  padding: 0 36px;
+  text-align: center;
+`;
+
+const Swap = styled.div`
+  background-color: #fff;
+  display: inline-block;
+  margin: 0 -10px;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
 `;
 
 const LanguageBar = () => {
   return (
     <Container>
       <Content>
-        <Text>영어</Text>
+        <Text>수정 전</Text>
       </Content>
+      <Swap>-></Swap>
       <Content>
-        <Text>한국어</Text>
+        <Text>수정 후</Text>
       </Content>
     </Container>
   );

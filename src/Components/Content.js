@@ -3,7 +3,8 @@ import styled from "styled-components";
 import TextareaAutosize from "react-textarea-autosize";
 import { Button } from "react-bootstrap";
 import LanguageBar from "./LanguageBar";
-import "../Styled/App.css";
+import copy from "copy-to-clipboard";
+import "../css/App.css";
 
 const Container = styled.div`
   width: 100%;
@@ -32,56 +33,30 @@ const SourceContainer = styled.div`
 
 const ResultContainer = styled.div`
   box-shadow: none;
-  display: flex;
-  flex-direction: column;
   min-height: 300px;
   position: relative;
   width: 50%;
   background-color: #f5f5f5;
   border-radius: 0 0 8px 0;
-  padding: 20px;
-`;
-
-const ResultText = styled.span`
-  font-size: 18px;
-  line-height: 28px;
-  color: rgba(0, 0, 0, 0.87);
-  white-space: pre-wrap;
-  min-height: 20px;
 `;
 
 const ResultFooter = styled.div`
   position: absolute;
-  width: calc(100% - 22px);
-  height: 44px;
-  left: 14px;
+  width: calc(100% - 30px);
   bottom: 8px;
   padding-top: 8px;
-`;
-
-const CopyButton = styled.button`
-  display: block;
-  float: right;
-  box-sizing: border-box;
-  height: 36px;
-  width: 36px;
-  background-image: -webkit-image-set(
-    url("https://ssl.gstatic.com/images/icons/material/system_gm/1x/content_copy_black_24dp.png") 1x,
-    url("https://ssl.gstatic.com/images/icons/material/system_gm/2x/content_copy_black_24dp.png") 2x
-  );
-  background-repeat: no-repeat;
-  opacity: 0.55;
-  :hover {
-    color: black;
-    cursor: pointer;
-  }
 `;
 
 const Content = () => {
   const [resultText, setResultText] = useState("");
 
   const onInputSource = e => {
-    setResultText(e.target.value);
+    const input = e.target.value;
+    setResultText(input.replace(/(\n|\r\n)/g, " "));
+  };
+
+  const onClickCopy = e => {
+    copy(resultText);
   };
 
   return (
@@ -89,13 +64,14 @@ const Content = () => {
       <LanguageBar />
       <TextContent>
         <SourceContainer>
-          <TextareaAutosize className="textarea" onInput={onInputSource} />
+          <TextareaAutosize className="input-textarea" onInput={onInputSource} />
         </SourceContainer>
         <ResultContainer>
-          <ResultText>{resultText}</ResultText>
+          <TextareaAutosize className="result-textarea" value={resultText} />
           <ResultFooter>
-            <Button className="copy-button">Copy</Button>
-            <CopyButton role="button" aria-label="변역 복사" data-tooltip="번역 복사" />
+            <Button className="copy-button" onClick={onClickCopy}>
+              Copy
+            </Button>
           </ResultFooter>
         </ResultContainer>
       </TextContent>
