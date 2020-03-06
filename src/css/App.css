@@ -22,25 +22,13 @@
   outline: none !important;
 }
 
-.result-textarea {
-  border-bottom-width: 0;
-  border-color: #ddd;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  width: 100%;
-  padding: 20px;
+.result-text {
+  display: inline;
+  padding: 0;
   font-size: 18px;
   line-height: 28px;
-  min-height: 100px;
-  resize: none;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #f5f5f5;
-}
-
-.result-textarea:focus {
-  border-bottom: 0;
-  outline: none !important;
+  word-wrap: break-word;
 }
 
 .copy-button {

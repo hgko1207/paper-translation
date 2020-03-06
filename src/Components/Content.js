@@ -33,8 +33,9 @@ const SourceContainer = styled.div`
 
 const ResultContainer = styled.div`
   box-shadow: none;
-  min-height: 300px;
+  min-height: 200px;
   position: relative;
+  padding: 20px;
   width: 50%;
   background-color: #f5f5f5;
   border-radius: 0 0 8px 0;
@@ -53,6 +54,7 @@ const Content = () => {
   const onInputSource = e => {
     const input = e.target.value;
     setResultText(input.replace(/(\n|\r\n)/g, " "));
+    copy(resultText);
   };
 
   const onClickCopy = e => {
@@ -67,7 +69,7 @@ const Content = () => {
           <TextareaAutosize className="input-textarea" onInput={onInputSource} />
         </SourceContainer>
         <ResultContainer>
-          <TextareaAutosize className="result-textarea" value={resultText} />
+          <div className="result-text">{resultText}</div>
           <ResultFooter>
             <Button className="copy-button" onClick={onClickCopy}>
               Copy
