@@ -53,8 +53,9 @@ const Content = () => {
 
   const onInputSource = e => {
     const input = e.target.value;
-    setResultText(input.replace(/(\n|\r\n)/g, " "));
-    copy(resultText);
+    // 엔터, 주석 제거
+    setResultText(input.replace(/(\n|\r\n|\/\/)/g, " "));
+    //copy(resultText);
   };
 
   const onClickCopy = e => {
