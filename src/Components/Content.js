@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import TextareaAutosize from "react-textarea-autosize";
 import { Button } from "react-bootstrap";
+import FontAwesome from "react-fontawesome";
 import LanguageBar from "./LanguageBar";
 import copy from "copy-to-clipboard";
 import "../css/App.css";
@@ -9,13 +10,16 @@ import "../css/App.css";
 const Container = styled.div`
   width: 100%;
   min-height: auto;
-  margin-top: 30px;
+  padding-top: 30px;
+`;
+
+const Card = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.37);
 `;
 
-const TextContent = styled.div`
+const CardBody = styled.div`
   display: flex;
   flex-flow: row nowrap;
 `;
@@ -46,6 +50,7 @@ const ResultFooter = styled.div`
   width: calc(100% - 30px);
   bottom: 8px;
   padding-top: 8px;
+  text-align: right;
 `;
 
 const Content = () => {
@@ -64,20 +69,23 @@ const Content = () => {
 
   return (
     <Container>
-      <LanguageBar />
-      <TextContent>
-        <SourceContainer>
-          <TextareaAutosize className="input-textarea" onInput={onInputSource} />
-        </SourceContainer>
-        <ResultContainer>
-          <div className="result-text">{resultText}</div>
-          <ResultFooter>
-            <Button className="copy-button" onClick={onClickCopy}>
-              Copy
-            </Button>
-          </ResultFooter>
-        </ResultContainer>
-      </TextContent>
+      <Card>
+        <LanguageBar />
+        <CardBody>
+          <SourceContainer>
+            <TextareaAutosize className="input-textarea" onInput={onInputSource} />
+          </SourceContainer>
+          <ResultContainer>
+            <div className="result-text">{resultText}</div>
+            <ResultFooter>
+              <Button onClick={onClickCopy}>
+                <FontAwesome name="copy" />
+                &nbsp;&nbsp;Copy
+              </Button>
+            </ResultFooter>
+          </ResultContainer>
+        </CardBody>
+      </Card>
     </Container>
   );
 };

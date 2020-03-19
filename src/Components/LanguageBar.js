@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import FontAwesome from "react-fontawesome";
 
 const Container = styled.div`
   border-radius: 8px 8px 0 0;
@@ -41,7 +42,9 @@ const LanguageBar = () => {
       <Content>
         <Text>수정 전</Text>
       </Content>
-      <Swap>-></Swap>
+      <Swap>
+        <FontAwesome name="arrow-right" />
+      </Swap>
       <Content>
         <Text>수정 후</Text>
       </Content>
