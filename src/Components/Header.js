@@ -46,7 +46,9 @@ const Header = () => {
             그래서 영어 논문 번역의 편리성을 위해 불필요한 글자를 제거하는 기능을 구현했다.
           </div>
           <br />
-          <div>글자 제거 목록</div>
+          <div>
+            <strong>글자 제거 목록</strong>
+          </div>
           <div>
             &nbsp;&nbsp;
             <FontAwesome name="caret-right" /> 엔터(\r)
@@ -58,6 +60,10 @@ const Header = () => {
           <div>
             &nbsp;&nbsp;
             <FontAwesome name="caret-right" /> 주석(//)
+          </div>
+          <div>
+            &nbsp;&nbsp;
+            <FontAwesome name="caret-right" /> 여러 개의 공백
           </div>
         </Modal.Body>
         <Modal.Footer>

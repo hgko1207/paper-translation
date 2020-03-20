@@ -58,8 +58,13 @@ const Content = () => {
 
   const onInputSource = e => {
     const input = e.target.value;
-    // 엔터, 주석 제거
-    setResultText(input.replace(/(\n|\r\n|\/\/)/g, " "));
+    // 엔터, 주석, 여러개의 공백 제거
+    setResultText(
+      input
+        .replace(/(\n | \r\n)/g, " ")
+        .replace(/\/\//g, "")
+        .replace(/ +/g, " ")
+    );
     //copy(resultText);
   };
 
