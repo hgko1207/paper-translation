@@ -67,7 +67,9 @@ const Header = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
+          <Button variant="secondary" onClick={() => setShow(false)}>
+            Close
+          </Button>
         </Modal.Footer>
       </Modal>
     </Container>
