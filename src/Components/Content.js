@@ -61,7 +61,8 @@ const Content = () => {
     // 엔터, 주석, 여러개의 공백 제거
     setResultText(
       input
-        .replace(/(\n | \r\n)/g, " ")
+        .replace(/\n/g, " ")
+        .replace(/\r/g, " ")
         .replace(/\/\//g, "")
         .replace(/ +/g, " ")
     );
