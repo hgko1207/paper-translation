@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed786d27916e7bda92c5647ff1bbed82",
+    "revision": "5e3b76c7b6daa3a7cc99fd8cd4584483",
     "url": "/paper-translation/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/paper-translation/static/css/2.47e06e2e.chunk.css"
   },
   {
-    "revision": "b5cb42ca71292009f7bd",
+    "revision": "f2d6c7aeb5fd3e551946",
     "url": "/paper-translation/static/css/main.5297a160.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/paper-translation/static/js/2.974ff389.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b5cb42ca71292009f7bd",
-    "url": "/paper-translation/static/js/main.bb9bebf7.chunk.js"
+    "revision": "f2d6c7aeb5fd3e551946",
+    "url": "/paper-translation/static/js/main.69bcf280.chunk.js"
   },
   {
     "revision": "92accab61efb53e9e370",
