@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Content from "./Content";
+import "../css/App.css";
+
+import BottomAdSense from '../AdSense/BottomAdSense';
 
 const Container = styled.div`
   height: calc(100vh - 65px);
@@ -36,6 +39,10 @@ class Frame extends Component {
       <Container>
         <Page>
           <Content />
+
+          <div className="bottom-google-ad">
+            <BottomAdSense/>
+          </div>
         </Page>
       </Container>
     );
